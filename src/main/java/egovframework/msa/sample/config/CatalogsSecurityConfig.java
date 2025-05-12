@@ -22,7 +22,7 @@ public class CatalogsSecurityConfig {
 		// 사이트 위변조 요청 방지
     	http.csrf(AbstractHttpConfigurer::disable);
 
-		// 세션을 사용하지 않기 때문에 STATELESS로 설정
+		// 세션을 사용하지 않기 때문에 STATELESS로 설정  
     	http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
     	// 인가(접근권한) 설정
